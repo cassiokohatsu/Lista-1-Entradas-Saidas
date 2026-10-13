@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcular Troco</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="ex001.html">Exercício 1</a></li>
+            <li><a href="ex002.html">Exercício 2</a></li>
+            <li><a href="ex003.html">Exercício 3</a></li>
+            <li><a href="ex004.html">Exercício 4</a></li>
+            <li><a href="ex005.html">Exercício 5</a></li>
+            <li><a href="ex006.html">Exercício 6</a></li>
+            <li><a href="ex007.html">Exercício 7</a></li>
+            <li><a href="ex008.html">Exercício 8</a></li>
+        </ul>
+    </nav>
+    <form>
+        <h1>Calcular Troco</h1>
+        <label for="item1">Digite o valor do 1º item</label>
+        <input type="number" id="item1">
+        <label for="item2">Digite o valor do 2º item</label>
+        <input type="number" id="item2">
+        <label for="item3">Digite o valor do 3º item</label>
+        <input type="number" id="item3">
+        <label for="item4">Digite o valor do 4º item</label>
+        <input type="number" id="item4">
+        <label for="item5">Digite o valor do 5º item</label>
+        <input type="number" id="item5">
+        <label for="dinheiro">Digite o valor em dinheiro</label>
+        <input type="number" id="dinheiro">
+        <button>Calcular</button>
+        <div id="resultado"></div>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const item1 = parseFloat(document.getElementById('item1').value);
+            const item2 = parseFloat(document.getElementById('item2').value);
+            const item3 = parseFloat(document.getElementById('item3').value);
+            const item4 = parseFloat(document.getElementById('item4').value);
+            const item5 = parseFloat(document.getElementById('item5').value);
+            const dinheiro = parseFloat(document.getElementById('dinheiro').value);
+            const total = item1 + item2 + item3 + item4 + item5;
+            const troco = dinheiro - total;
+            document.getElementById('resultado').innerText = `O troco é: R$ ${troco.toFixed(2)}`;        
+        });
+    </script>
+</body>
+</html>

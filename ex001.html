@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora da Área de Retângulo</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="ex001.html">Exercício 1</a></li>
+            <li><a href="ex002.html">Exercício 2</a></li>
+            <li><a href="ex003.html">Exercício 3</a></li>
+            <li><a href="ex004.html">Exercício 4</a></li>
+            <li><a href="ex005.html">Exercício 5</a></li>
+            <li><a href="ex006.html">Exercício 6</a></li>
+            <li><a href="ex007.html">Exercício 7</a></li>
+            <li><a href="ex008.html">Exercício 8</a></li>
+        </ul>
+    </nav>
+    <form>
+        <h1>Calcular área de um Retângulo</h1>
+        <label for="base">Digite a Base</label>
+        <input type="number" id="base">
+        <label for="altura">Digite a Altura</label>
+        <input type="number" id="altura">
+        <button>Calcular</button>
+        <div id="resultado"></div>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const base = document.getElementById('base').value;
+            const altura = document.getElementById('altura').value;
+            const area = base * altura;
+            document.getElementById('resultado').innerText = `A área do retângulo é: ${area}`;
+        });
+    </script>
+</body>
+</html>

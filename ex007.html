@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Converter Dólar para Reais</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="ex001.html">Exercício 1</a></li>
+            <li><a href="ex002.html">Exercício 2</a></li>
+            <li><a href="ex003.html">Exercício 3</a></li>
+            <li><a href="ex004.html">Exercício 4</a></li>
+            <li><a href="ex005.html">Exercício 5</a></li>
+            <li><a href="ex006.html">Exercício 6</a></li>
+            <li><a href="ex007.html">Exercício 7</a></li>
+            <li><a href="ex008.html">Exercício 8</a></li>
+        </ul>
+    </nav>
+    <form>
+        <h1>Converter Dólar para Reais</h1>
+        <label for="cotacao">Digite a cotação do dólar</label>
+        <input type="number" id="cotacao">
+        <label for="dolares">Digite o valor em dólares</label>
+        <input type="number" id="dolares">
+        <button>Converter</button>
+        <div id="resultado"></div>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const cotacao = document.getElementById('cotacao').value;
+            const dolares = document.getElementById('dolares').value;
+            const reais = dolares * cotacao;
+            document.getElementById('resultado').innerText = `O valor é: R$ ${reais}`;
+        });
+    </script>
+</body>
+</html>
